@@ -108,14 +108,18 @@ def update_post(categories, titles, old_content):
     print("[+] Updated category sentence with bold categories")
 
     # --- Chèn thêm UL ngay sau <p> ---
-    new_ul = soup.new_tag("ul")
-    new_ul["class"] = ["wp-block-list"]
-    for t in titles:
-        li = soup.new_tag("li")
-        li.string = t
-        new_ul.append(li)
-    p_tag.insert_after(new_ul)
-    print("[+] Inserted new UL with titles")
+    next_tag = p_tag.find_next_sibling()
+    if next_tag and next_tag.name == "ul":
+        print("⚠️ Đã có UL ngay sau <p> -> bỏ qua không chèn mới")
+    else:
+        new_ul = soup.new_tag("ul")
+        new_ul["class"] = ["wp-block-list"]
+        for t in titles:
+            li = soup.new_tag("li")
+            li.string = t
+            new_ul.append(li)
+        p_tag.insert_after(new_ul)
+        print("[+] Inserted new UL with titles")
 
     new_content = str(soup)
 
