@@ -7,8 +7,8 @@ import os
 WP_URL = "https://blog.mexc.com/wp-json/wp/v2/posts"
 WP_USERNAME = os.getenv("WP_USERNAME")   # username thật
 WP_APP_PASSWORD = os.getenv("WP_APP_PASSWORD")   # app password thật
-POST_ID = 297324  # ID bài Hamster Kombat Combo Cards
-CHECK_TITLES = ["Game console", "Severance", "TAP TO MONETIZE"]  # Titles cũ để so sánh
+POST_ID = 297813  # ID bài Hamster Kombat Combo Cards
+CHECK_TITLES = ["Release of the soundtrack", "AD FREZY", "Time trackers"]  # Titles cũ để so sánh
 
 # ================= SCRAPE =================
 def scrape_combo():
