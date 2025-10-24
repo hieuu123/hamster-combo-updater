@@ -7,7 +7,7 @@ import os
 WP_URL = "https://blog.mexc.com/wp-json/wp/v2/posts"
 WP_USERNAME = os.getenv("WP_USERNAME")   # username thật
 WP_APP_PASSWORD = os.getenv("WP_APP_PASSWORD")   # app password thật
-POST_ID = 298311  # ID bài Hamster Kombat Combo Cards
+POST_ID = 298459  # ID bài Hamster Kombat Combo Cards
 CHECK_TITLES = ["Likes are essential", "Bold moves", "GAME ON"]  # Titles cũ để so sánh
 
 # ================= SCRAPE =================
