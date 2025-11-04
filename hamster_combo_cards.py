@@ -14,7 +14,8 @@ CHECK_TITLES = ["Cookiess", "Investment or partnership", "NIGHT IN MUSEUM"]  # T
 def scrape_combo():
     url = "https://hamster-combo.com/"
     print(f"[+] Scraping combo cards from {url}")
-    r = requests.get(url, timeout=15, headers={"User-Agent": "Mozilla/5.0"})
+    scraper = cloudscraper.create_scraper(browser={"browser": "chrome", "platform": "windows", "mobile": False})
+    r = scraper.get(url, timeout=20)
     r.raise_for_status()
     soup = BeautifulSoup(r.text, "html.parser")
 
