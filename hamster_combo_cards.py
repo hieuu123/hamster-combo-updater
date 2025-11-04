@@ -2,6 +2,7 @@ import base64
 import requests
 from bs4 import BeautifulSoup, NavigableString
 import os
+import cloudscraper
 
 # ================= CONFIG =================
 WP_URL = "https://blog.mexc.com/wp-json/wp/v2/posts"
