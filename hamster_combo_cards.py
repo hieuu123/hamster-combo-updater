@@ -8,8 +8,8 @@ import cloudscraper
 WP_URL = "https://blog.mexc.com/wp-json/wp/v2/posts"
 WP_USERNAME = os.getenv("WP_USERNAME")   # username thật
 WP_APP_PASSWORD = os.getenv("WP_APP_PASSWORD")   # app password thật
-POST_ID = 303108  # ID bài Hamster Kombat Combo Cards
-CHECK_TITLES = ["Stonks", "Investment or partnership", "Game console"]  # Titles cũ để so sánh
+POST_ID = 303189  # ID bài Hamster Kombat Combo Cards
+CHECK_TITLES = ["A rumor", "Open discord server", "GAME ON"]  # Titles cũ để so sánh
 
 # ================= SCRAPE =================
 def scrape_combo():
